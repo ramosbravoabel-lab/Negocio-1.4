@@ -1,0 +1,174 @@
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    background: #f4f4f4;
+    font-family: "Gemola", sans-serif;
+    color: #222;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: #ffe600;
+    padding: 25px;
+    text-align: center;
+    border-bottom: 4px solid #000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 42px;
+    letter-spacing: 1px;
+}
+
+/* ===== MENÚ ===== */
+.menu {
+    width: 95%;
+    max-width: 1100px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* ----- CARD ----- */
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+/* ----- DESCRIPCIÓN ----- */
+.descripcion {
+    background: #000;
+    color: #fff;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.descripcion h2 {
+    margin: 0 0 8px;
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+.descripcion .precio {
+    margin: 8px 0 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* ----- BOTÓN ----- */
+.descripcion button {
+    background: linear-gradient(45deg, #ff3b3b, #c80000);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.descripcion button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #ff0000, #a00000);
+}
+
+/* ----- IMÁGENES ----- */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== FOOTER ===== */
+.footer-social {
+    margin-top: 60px;
+    padding: 25px 0;
+    background: #fff4a8;
+    border-top: 4px solid #000;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+}
+
+/* ----- REDES SOCIALES FOOTER ----- */
+.footer-social {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px 0;
+    background: #fff8b3;
+    border-top: 3px solid #000;
+}
+
+/* Contenedor interno centrado del footer */
+.footer-contenido {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ----- DIRECCIÓN ----- */
+.footer-social .direccion {
+    margin-bottom: 18px;
+    font-size: 17px;
+}
+
+.footer-social .direccion a {
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.25s ease;
+}
+
+.footer-social .direccion a:hover {
+    color: #d10000;
+}
+
+/* ----- REDES SOCIALES ----- */
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.icono-red {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.85;
+}
+
+.icono-red:hover {
+    transform: scale(1.25);
+    opacity: 1;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 800px) {
+    .menu {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .descripcion {
+        padding: 20px;
+    }
+}
